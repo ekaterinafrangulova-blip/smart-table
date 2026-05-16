@@ -30,7 +30,11 @@ function collectState() {
     return {
         ...state,
         rowsPerPage,
-        page
+        page,
+        total: [
+            state.totalFrom ? parseFloat(state.totalFrom) : null,
+            state.totalTo ? parseFloat(state.totalTo) : null
+        ]
     };
 }
 
